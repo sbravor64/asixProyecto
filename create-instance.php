@@ -7,13 +7,6 @@
    }
    ?>
 <?php
-   $comando = shell_exec("sudo podman pod ls");
-   echo "<pre>$comando</pre>";
-   
-   $comando1 = shell_exec("sudo podman container ls");
-   echo "<pre>$comando1</pre>";
-   ?>
-<?php
    // Incluir fichero de configuración de mysql
    require_once "config.php";
     

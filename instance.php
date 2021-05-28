@@ -140,7 +140,7 @@
                
                if (($gestor = fopen("/home/ubuntu/listaInstancias.csv", "r")) !== FALSE) {
                    echo '<table id="customers">';
-                   echo '<tr><th>ID de POD</th><th>Nombre</th><th>Estado</th><th>Fecha de Creación</th></tr>';
+                   echo '<tr><th>ID de POD</th><th>Nombre</th><th>Estado</th><th>Fecha de Creación</th><th>Sitio</th></tr>';
                    while (($datos = fgetcsv($gestor, 1000, ",")) !== FALSE) {
                        $numero = count($datos);
                        $fila++;
@@ -148,6 +148,8 @@
                        for ($c=0; $c < $numero; $c++) {
                            echo "<td>".$datos[$c] ."</td>";  
                        }
+                       echo "<td><a href='http://proyecto.ccff.site:8000'>Ver</a></td>";
+
                        echo "</tr>";
                    }
                    echo '</table>';
